@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.zee.sso.user.elastic.read</groupId>
+		<artifactId>sso-user-elastic-read</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>sso-user-elastic-read-deploy</artifactId>
+	<name>sso-user-elastic-read-deploy</name>
+	<description>SSO user elastic read deployables</description>
+
+	<properties>
+		<elasticsearch.version>7.17.1</elasticsearch.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.zee.sso.user.elastic.read</groupId>
+			<artifactId>sso-user-elastic-read-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+
+	</dependencies>
+
+	<build>
+		<finalName>sso-user-elastic-read-${project.version}</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

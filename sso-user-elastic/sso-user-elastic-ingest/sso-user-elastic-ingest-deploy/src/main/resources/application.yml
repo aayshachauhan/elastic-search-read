@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: user-elk-ing
+  profiles.active: development
+---
+spring: 
+  profiles: development
+server:
+  port : 40002
+
+elasticsearch:
+  cluster:
+    nodes:
+      - nodeHost: 10.147.19.48
+        nodePort: 9200
+    name: elastic01-keycloak
+  username: ""
+  password: ""
+---
+spring: 
+  profiles: uat
+server:
+  port : 40002
+elasticsearch:
+  cluster:
+    nodes:
+      - nodeHost: 10.147.19.48
+        nodePort: 9200
+    name: elastic01-keycloak
+  username: ""
+  password: ""
+---
+spring: 
+  profiles: production
+server:
+  port : 40002
+elasticsearch:
+  cluster:
+    nodes:
+      - nodeHost: 10.147.19.48
+        nodePort: 9200
+    name: elastic01-keycloak
+  username: ""
+  password: ""
+---
+spring: 
+  profiles: docker
+server:
+  port : 40002
+elasticsearch:
+  cluster:
+    nodes:
+      - nodeHost: 10.147.19.48
+        nodePort: 9200
+    name: elastic01-keycloak
+  username: ""
+  password: ""
+

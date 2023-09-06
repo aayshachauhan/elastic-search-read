@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.zee.sso.user.elastic.read</groupId>
+		<artifactId>sso-user-elastic-read</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>sso-user-elastic-read-api</artifactId>
+	<name>sso-user-elastic-read-api</name>
+	<description>SSO user elastic read DTOs</description>
+
+	<properties>
+		<platform.version>0.0.13-SNAPSHOT</platform.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.zshop.platform.common</groupId>
+			<artifactId>helper-service</artifactId>
+			<version>${platform.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.zshop.platform.common</groupId>
+			<artifactId>commons-swagger</artifactId>
+			<version>${platform.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>io.springfox</groupId>
+					<artifactId>springfox-data-rest</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>http://35.154.211.92:8081/repository/zshop-snapshot/</url>
+		</snapshotRepository>
+		<repository>
+			<id>nexus-release</id>
+			<url>http://35.154.211.92:8081/repository/zshop-release/</url>
+		</repository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>nexus-release</id>
+			<url>http://35.154.211.92:8081/repository/zshop-release/</url>
+		</repository>
+		<repository>
+			<id>nexus-snapshots</id>
+			<url>http://35.154.211.92:8081/repository/zshop-snapshot/</url>
+		</repository>
+	</repositories>
+
+</project>

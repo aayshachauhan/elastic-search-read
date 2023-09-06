@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.zee.sso.user.elastic.ingest</groupId>
+		<artifactId>sso-user-elastic-ingest</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>sso-user-elastic-ingest-service</artifactId>
+	<name>sso-user-elastic-ingest-service</name>
+	<description>SSO user elastic ingest services</description>
+
+	<properties>
+		<swagger-version>2.9.2</swagger-version>
+
+		<platform.version>0.0.13-SNAPSHOT</platform.version>
+
+		<elasticsearch.version>7.5.2</elasticsearch.version>
+
+	</properties>
+	
+	<dependencies>
+		<dependency>
+			<groupId>com.zee.sso.user.elastic.ingest</groupId>
+			<artifactId>sso-user-elastic-ingest-api</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+		<!-- <dependency> -->
+		<!-- <groupId>com.zshop.platform.common</groupId> -->
+		<!-- <artifactId>commons-queue</artifactId> -->
+		<!-- <version>${platform.version}</version> -->
+		<!-- </dependency> -->
+
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>com.zshop.platform.common</groupId>
+			<artifactId>common-elasticsearch</artifactId>
+			<version>${platform.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.zshop.platform.common</groupId>
+			<artifactId>commons-exceptions</artifactId>
+			<version>${platform.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.elasticsearch</groupId>
+			<artifactId>elasticsearch</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>elasticsearch-rest-high-level-client</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
